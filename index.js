@@ -18,4 +18,3 @@ client.on('presenceUpdate',(before,after)=>{
 });
 
 client.login(process.env.BOT_TOKEN);
-
