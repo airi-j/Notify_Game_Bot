@@ -1,0 +1,13 @@
+{
+    "name": "notify_game_bot",
+    "description": "When guild users start game, this bot notify game name and user name.",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+        "discord.js": "11.5.1",
+        "request": "2.88.0"
+    }
+  }
