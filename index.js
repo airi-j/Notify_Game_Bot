@@ -10,11 +10,9 @@ client.on('presenceUpdate',(before,after)=>{
 
     const gameInfo = after.presence.game;
     const userName = after.displayName;
-    console.log(gameInfo)
     if(gameInfo !== null){
-        after.send(userName+"さんが"+gameInfo.name+"をはじめました。")
+        client.channels.get(process.env.CHANNEL_ID).send(userName+"さんが"+gameInfo.name+"をはじめました。");
     }
-    client.channels.get(process.env.CHANNEL_ID).send("ok");
 });
 
 client.login(process.env.BOT_TOKEN);
