@@ -8,10 +8,11 @@ client.on('ready', () => {
 
 client.on('presenceUpdate',(before,after)=>{
 
-    const gameInfo = after.presence.game;
+    const beforeGameInfo = before.presence.game;
+    const afterGameInfo = after.presence.game;
     const userName = after.displayName;
-    if(gameInfo !== null){
-        client.channels.get(process.env.CHANNEL_ID).send(userName+"さんが"+gameInfo.name+"をはじめました。");
+    if(afterGameInfo !== null && beforeGameInfo === null){
+        client.channels.get(process.env.CHANNEL_ID).send(userName+"さんが"+afterGameInfo.name+"をはじめました。");
     }
 });
 
