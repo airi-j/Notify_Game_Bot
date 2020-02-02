@@ -1,8 +1,6 @@
 
-import { Client } from 'discord.js';
-
-
-const client = new Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
 /**
  * ステータス情報更新イベント
